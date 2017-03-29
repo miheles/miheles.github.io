@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="jquery.iframetracker.js"></script>
+
+    </head>
+    <body>
+       <script type="text/javascript">
+    
+window.onbeforeunload = function(){
+    return confirm('Точно хотите выйти?');
+}
+        jQuery(document).ready(function($){
+        $('.iframe_wrap iframe').iframeTracker({
+        blurCallback: function(){
+            document.location.href = "http://yandex.ru";
+        }
+        });
+        });
+    
+        </script>
+        <div class="iframe_wrap">
+        <iframe src="http://example.com" width="500" height="500"></iframe>
+        </div>
+    </body>
+</html>
